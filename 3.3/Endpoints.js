@@ -52,15 +52,15 @@ app.get('/secret', (request, response) => {
 app.get('/xml', (request, response) => {
     response.sendFile(`${__dirname}/test.xml`)})
 
+const meobj = {
+    "firstName": "Nico",
+    "lastName": "Studer",
+    "age": 17,
+    "place": "Samstagern",
+    "eyeColor": "Blau"
+}
 app.get('/me', (request, response) => {
-    const json = {
-        "firstName": "Nico",
-        "lastName": "Studer",
-        "age": 17,
-        "place": "Samstagern",
-        "eyeColor": "Blau"
-    }
-    response.send(`${json.firstName}, ${json.lastName}, ${json.age}, ${json.place}, ${json.eyeColor}`)})
+    response.send(meobj)})
 
 
 

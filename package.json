@@ -11,6 +11,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
-    "request": "^2.88.2"
+    "header": "^0.1.1",
+    "request": "^2.88.2",
+    "spread": "^0.0.1"
   }
 }
