@@ -1,0 +1,63 @@
+1. Die 3 wichtigsten Ressourcen der API:
+Pet: Diese Ressource repräsentiert Haustiere im Pet Store.
+Store: Hiermit können Bestellungen im Pet Store verwaltet werden.
+User: Diese Ressource ermöglicht die Verwaltung von Benutzerkonten.
+
+2.
+Properties der 3 wichtigsten Ressourcen:
+Pet:
+id (integer, format: int64): Die eindeutige Kennung des Haustiers.
+name (string): Der Name des Haustiers.
+category (Category): Die Kategorie des Haustiers.
+photoUrls (array von strings): URLs zu Fotos des Haustiers.
+tags (array von Tags): Tags, die das Haustier beschreiben.
+status (string, enum: available, pending, sold): Der Status des Haustiers im Geschäft.
+
+Store:
+id (integer, format: int64): Die eindeutige Kennung der Bestellung.
+petId (integer, format: int64): Die Kennung des bestellten Haustiers.
+quantity (integer, format: int32): Die Anzahl der bestellten Haustiere.
+shipDate (string, format: date-time): Das Versanddatum der Bestellung.
+status (string, enum: placed, approved, delivered): Der Status der Bestellung.
+complete (boolean): Gibt an, ob die Bestellung abgeschlossen ist.
+
+User:
+id (integer, format: int64): Die eindeutige Kennung des Benutzers.
+username (string): Der Benutzername des Benutzers.
+firstName (string): Der Vorname des Benutzers.
+lastName (string): Der Nachname des Benutzers.
+email (string): Die E-Mail-Adresse des Benutzers.
+password (string): Das Passwort des Benutzers.
+phone (string): Die Telefonnummer des Benutzers.
+userStatus (integer, format: int32): Der Status des Benutzers.
+
+Json für PET obj
+
+{
+  "id": 10,
+  "name": "doggie",
+  "category": {
+    "id": 1,
+    "name": "Dogs"
+  },
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
+
+
+3. Um ein einzelnes Pet-Objekt abzurufen, kannst du den Endpunkt /pet/{petId} verwenden, wobei {petId} durch die ID des gesuchten Haustiers ersetzt wird.
+
+
+4. Weitere wichtige Informationen zur API:
+   Authentifizierung: Die API unterstützt OAuth2-Authentifizierung über den petstore_auth-Sicherheitsschema. Es gibt auch die Möglichkeit, einen API-Schlüssel (api_key) zu verwenden.
+   Dokumentation: Weitere Details und Möglichkeiten findest du in der offiziellen Dokumentation der API.
+   Interaktion mit Benutzern: Die API ermöglicht das Erstellen, Aktualisieren und Löschen von Benutzerkonten sowie das Einloggen und Ausloggen von Benutzern.
+   Bestellungen im Store: Du kannst Bestellungen im Pet Store platzieren, abrufen und löschen.

@@ -12,6 +12,7 @@
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "header": "^0.1.1",
+    "json": "^11.0.0",
     "request": "^2.88.2",
     "spread": "^0.0.1"
   }
