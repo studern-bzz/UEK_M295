@@ -9,11 +9,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
+    "express-session": "^1.18.0",
     "fs": "^0.0.1-security",
     "header": "^0.1.1",
     "json": "^11.0.0",
     "request": "^2.88.2",
-    "spread": "^0.0.1"
+    "spread": "^0.0.1",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1"
   }
 }
